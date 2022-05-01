@@ -54,10 +54,7 @@ body{
 	color:#FFFFFF;
 	text-decoration:underline;
 }
-.active {
-	color:#FFFFFF !important;
-	text-decoration:underline !important;
-}
+
 .container-lat{
 	display: flex;
 	width: 15%;
