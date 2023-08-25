@@ -77,5 +77,4 @@ class ContentServiceTest {
         assertEquals("Updated Short Desc", existingContent.getShortDescription());
         assertEquals("Updated Full Desc", existingContent.getFullDescription());
     }
-    // Write more tests for other methods in ContentService
 }
