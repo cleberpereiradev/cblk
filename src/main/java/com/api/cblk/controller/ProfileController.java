@@ -1,9 +1,9 @@
 package com.api.cblk.controller;
 
-import com.api.cblk.domain.dto.ProfileCompleteData;
-import com.api.cblk.domain.dto.ProfileListData;
-import com.api.cblk.domain.dto.ProfileSignUpData;
-import com.api.cblk.domain.dto.ProfileUpdateData;
+import com.api.cblk.domain.dto.profile.ProfileCompleteData;
+import com.api.cblk.domain.dto.profile.ProfileListData;
+import com.api.cblk.domain.dto.profile.ProfileSignUpData;
+import com.api.cblk.domain.dto.profile.ProfileUpdateData;
 import com.api.cblk.domain.entity.Profile;
 import com.api.cblk.service.ProfileService;
 import jakarta.transaction.Transactional;

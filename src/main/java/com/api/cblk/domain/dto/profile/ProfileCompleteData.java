@@ -1,9 +1,8 @@
-package com.api.cblk.domain.dto;
+package com.api.cblk.domain.dto.profile;
 
 import com.api.cblk.domain.entity.Profile;
 
 import java.time.LocalDate;
-import java.util.Optional;
 
 public record ProfileCompleteData(Long id, String name, LocalDate birthday, String course, String imgUrl, String aboutText) {
     public ProfileCompleteData(Profile profile){

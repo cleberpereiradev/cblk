@@ -1,15 +1,13 @@
 package com.api.cblk.domain.entity;
 
-import com.api.cblk.domain.dto.ProfileSignUpData;
-import com.api.cblk.domain.dto.ProfileUpdateData;
+import com.api.cblk.domain.dto.profile.ProfileSignUpData;
+import com.api.cblk.domain.dto.profile.ProfileUpdateData;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.Date;
-
 @Entity(name = "Profile")
 @Table(name = "profile")
 @AllArgsConstructor

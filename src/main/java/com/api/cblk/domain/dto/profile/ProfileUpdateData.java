@@ -1,4 +1,4 @@
-package com.api.cblk.domain.dto;
+package com.api.cblk.domain.dto.profile;
 
 import java.time.LocalDate;
 

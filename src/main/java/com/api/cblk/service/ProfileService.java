@@ -1,8 +1,8 @@
 package com.api.cblk.service;
 
-import com.api.cblk.domain.dto.ProfileCompleteData;
-import com.api.cblk.domain.dto.ProfileListData;
-import com.api.cblk.domain.dto.ProfileUpdateData;
+import com.api.cblk.domain.dto.profile.ProfileCompleteData;
+import com.api.cblk.domain.dto.profile.ProfileListData;
+import com.api.cblk.domain.dto.profile.ProfileUpdateData;
 import com.api.cblk.domain.entity.Profile;
 import com.api.cblk.repository.ProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
