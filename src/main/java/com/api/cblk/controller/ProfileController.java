@@ -46,9 +46,9 @@ public class ProfileController {
 
     @PutMapping
     @Transactional
-    public ResponseEntity update(@RequestBody ProfileUpdateData dados) {
-        this.profileService.update(dados);
-        return ResponseEntity.ok(new ProfileCompleteData(dados));
+    public ResponseEntity update(@RequestBody ProfileUpdateData data) {
+        this.profileService.update(data);
+        return ResponseEntity.ok(new ProfileCompleteData(data));
     }
 
     @DeleteMapping(value = "/{id}")
