@@ -52,6 +52,7 @@ public class ContentController {
     }
 
     @DeleteMapping(value = "/{id}")
+    @Transactional
     public ResponseEntity deleteById(@PathVariable Long id) {
         this.contentService.deleteById(id);
         return ResponseEntity.noContent().build();

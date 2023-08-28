@@ -29,6 +29,7 @@ public class ProfileController {
     }
 
     @GetMapping(value = "/{id}")
+    @Transactional
     public ResponseEntity findById(@PathVariable Long id) {
         var profile = this.profileService.findById(id);
 
