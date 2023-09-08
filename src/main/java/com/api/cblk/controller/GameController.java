@@ -34,6 +34,12 @@ public class GameController {
         return ResponseEntity.ok(game);
     }
 
+    @GetMapping(value = "/top-games")
+    public ResponseEntity findTopGames() {
+        var topGames = this.gameService.findTopGames();
+        return ResponseEntity.ok(topGames);
+    }
+
     @PostMapping
     @Transactional
     public ResponseEntity save(@RequestBody @Valid GameRegistrationData data, UriComponentsBuilder uriComponentsBuilder) {

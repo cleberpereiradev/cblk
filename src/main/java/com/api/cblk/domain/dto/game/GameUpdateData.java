@@ -2,10 +2,12 @@ package com.api.cblk.domain.dto.game;
 
 import com.api.cblk.domain.type.Genres;
 
+import java.time.LocalDate;
+
 public record GameUpdateData(
         Long id,
         String title,
-        Integer releaseDate,
+        LocalDate releaseDate,
         Genres gameGenre,
         String gameImgUrl,
         String shortDescription,

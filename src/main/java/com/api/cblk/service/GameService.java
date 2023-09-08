@@ -2,6 +2,7 @@ package com.api.cblk.service;
 
 import com.api.cblk.domain.dto.game.GameCompleteData;
 import com.api.cblk.domain.dto.game.GameListData;
+import com.api.cblk.domain.dto.game.GameTopListData;
 import com.api.cblk.domain.dto.game.GameUpdateData;
 import com.api.cblk.domain.entity.Game;
 import com.api.cblk.repository.GameRepository;
@@ -18,6 +19,10 @@ public class GameService {
 
     public List<GameListData> findAll() {
         return this.gameRepository.findAll().stream().map(GameListData::new).toList();
+    }
+
+    public List<GameTopListData> findTopGames() {
+        return this.gameRepository.findTopGames().stream().map(GameTopListData::new).toList();
     }
 
     public GameCompleteData findById(Long id) {
@@ -40,4 +45,5 @@ public class GameService {
         var game = gameRepository.getReferenceById(data.id());
         game.update(data);
     }
+
 }

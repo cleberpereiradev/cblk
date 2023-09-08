@@ -9,6 +9,8 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity(name = "Game")
@@ -25,7 +27,7 @@ public class Game {
     @NotBlank
     private String title;
 
-    private Integer releaseDate;
+    private LocalDate releaseDate;
 
     private Genres gameGenre;
 
@@ -57,8 +59,8 @@ public class Game {
         if(data.title() != null) {
             this.title = data.title();
         }
-        if(data.releaseDate() < 1971 || data.releaseDate() > LocalDateTime.now().getYear()) {
-            this.gameGenre = data.gameGenre();
+        if (data.releaseDate() != null) {
+            this.releaseDate = data.releaseDate();
         }
         if(data.gameGenre() != null) {
             this.gameGenre = data.gameGenre();

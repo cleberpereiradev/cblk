@@ -3,10 +3,12 @@ package com.api.cblk.domain.dto.game;
 import com.api.cblk.domain.entity.Game;
 import com.api.cblk.domain.type.Genres;
 
+import java.time.LocalDate;
+
 public record GameCompleteData(
         Long id,
         String title,
-        Integer releaseDate,
+        LocalDate releaseDate,
         Genres gameGenre,
         String gameImgUrl,
         String shortDescription,
