@@ -6,6 +6,7 @@ import com.api.cblk.domain.dto.game.GameTopListData;
 import com.api.cblk.domain.dto.game.GameUpdateData;
 import com.api.cblk.domain.entity.Game;
 import com.api.cblk.repository.GameRepository;
+import jakarta.validation.ValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,8 +31,12 @@ public class GameService {
     }
 
     public GameCompleteData findById(Long id) {
-        var game = this.gameRepository.findById(id).get();
-        return new GameCompleteData(game);
+        if(this.gameRepository.existsById(id)) {
+            var game = this.gameRepository.findById(id).get();
+            return new GameCompleteData(game);
+        }else {
+            throw new ValidationException("ID não encontrado!");
+        }
     }
 
     public void save(Game data) {

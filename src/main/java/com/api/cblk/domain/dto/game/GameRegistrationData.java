@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 public record GameRegistrationData(
         String title,
-        LocalDate releaseDate,
+        int releaseDate,
         Genres gameGenre,
         String gameImgUrl,
         String shortDescription,

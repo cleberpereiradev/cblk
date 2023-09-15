@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public record GameCompleteData(
         Long id,
         String title,
-        LocalDate releaseDate,
+        int releaseDate,
         Genres gameGenre,
         String gameImgUrl,
         String shortDescription,

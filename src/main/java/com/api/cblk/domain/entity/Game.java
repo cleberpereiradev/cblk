@@ -27,7 +27,7 @@ public class Game {
     @NotBlank
     private String title;
 
-    private LocalDate releaseDate;
+    private int releaseDate;
 
     private Genres gameGenre;
 
@@ -59,7 +59,7 @@ public class Game {
         if(data.title() != null) {
             this.title = data.title();
         }
-        if (data.releaseDate() != null) {
+        if (data.releaseDate() != 0) {
             this.releaseDate = data.releaseDate();
         }
         if(data.gameGenre() != null) {
