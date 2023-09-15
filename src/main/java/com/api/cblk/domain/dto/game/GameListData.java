@@ -25,4 +25,15 @@ public record GameListData(Long id,
         );
     }
 
+    public GameListData(GameListData game) {
+        this(
+                game.id(),
+                game.title(),
+                game.releaseDate(),
+                game.gameGenre(),
+                game.gameImgUrl(),
+                game.shortDescription(),
+                game.rating()
+        );
+    }
 }

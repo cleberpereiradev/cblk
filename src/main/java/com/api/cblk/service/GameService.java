@@ -25,6 +25,10 @@ public class GameService {
         return this.gameRepository.findTopGames().stream().map(GameTopListData::new).toList();
     }
 
+    public List<GameListData> findRandomGames() {
+        return this.gameRepository.findRandomGames().stream().map(GameListData::new).toList();
+    }
+
     public GameCompleteData findById(Long id) {
         var game = this.gameRepository.findById(id).get();
         return new GameCompleteData(game);

@@ -40,6 +40,12 @@ public class GameController {
         return ResponseEntity.ok(topGames);
     }
 
+    @GetMapping(value = "/recommended")
+    public ResponseEntity findRandomGames() {
+        var games = this.gameService.findRandomGames();
+        return ResponseEntity.ok(games);
+    }
+
     @PostMapping
     @Transactional
     public ResponseEntity save(@RequestBody @Valid GameRegistrationData data, UriComponentsBuilder uriComponentsBuilder) {
