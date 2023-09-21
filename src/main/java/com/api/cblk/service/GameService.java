@@ -1,9 +1,6 @@
 package com.api.cblk.service;
 
-import com.api.cblk.domain.dto.game.GameCompleteData;
-import com.api.cblk.domain.dto.game.GameListData;
-import com.api.cblk.domain.dto.game.GameTopListData;
-import com.api.cblk.domain.dto.game.GameUpdateData;
+import com.api.cblk.domain.dto.game.*;
 import com.api.cblk.domain.entity.Game;
 import com.api.cblk.repository.GameRepository;
 import jakarta.validation.ValidationException;
@@ -26,8 +23,8 @@ public class GameService {
         return this.gameRepository.findTopGames().stream().map(GameTopListData::new).toList();
     }
 
-    public List<GameListData> findRandomGames() {
-        return this.gameRepository.findRandomGames().stream().map(GameListData::new).toList();
+    public List<GameRecommendedData> findRandomGames() {
+        return this.gameRepository.findRandomGames().stream().map(GameRecommendedData::new).toList();
     }
 
     public GameCompleteData findById(Long id) {

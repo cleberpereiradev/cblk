@@ -10,9 +10,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 @Entity(name = "Game")
 @Table(name = "games")
 @AllArgsConstructor
