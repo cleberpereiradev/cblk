@@ -1,6 +1,6 @@
 package com.api.cblk.repository;
 
-import com.api.cblk.domain.dto.game.GameListData;
+
 import com.api.cblk.domain.dto.game.GameRecommendedData;
 import com.api.cblk.domain.dto.game.GameTopListData;
 import com.api.cblk.domain.entity.Game;
